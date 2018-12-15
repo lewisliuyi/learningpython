@@ -104,7 +104,8 @@ class Hero(GameSprite):
     def update(self):
 
         # 英雄在水平方向移动
-        self.rect.x += self.speed
+        self.rect.x += self.speedx
+        self.rect.y += self.speedy
 
         # 控制英雄不能离开屏幕
         if self.rect.x < 0:

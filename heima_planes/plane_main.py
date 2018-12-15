@@ -68,11 +68,16 @@ class PlaneGame(object):
         keys_pressed = pygame.key.get_pressed()
         # 判断元组中对应的按键索引值 1
         if keys_pressed[pygame.K_RIGHT]:
-            self.hero.speed = 2
+            self.hero.speedx = 2
         elif keys_pressed[pygame.K_LEFT]:
-            self.hero.speed = -2
+            self.hero.speedx = -2
+        elif keys_pressed[pygame.K_UP]:
+            self.hero.speedy = -2
+        elif keys_pressed[pygame.K_DOWN]:
+            self.hero.speedy = 2
         else:
-            self.hero.speed = 0
+            self.hero.speedx = 0
+            self.hero.speedy = 0
 
     def __check_collide(self):
         
